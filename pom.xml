@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yangtianle</groupId>
+    <artifactId>common-tool</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.1</version>
+    <modules>
+        <module>common-tool-util</module>
+        <module>common-tool-lock</module>
+        <module>common-tool-log</module>
+    </modules>
+
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>This is a distributed job scheduling framework.</description>
+    <url>https://github.com/tianle-yang/common-tool</url>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Tianle Yang</name>
+            <email>yangtianle@tom.com</email>
+            <organization>Tianle Yang</organization>
+            <organizationUrl>https://www.cnblogs.com/yangtianle</organizationUrl>
+        </developer>
+    </developers>
+
+    <properties>
+        <common.tool.version>1.0.1</common.tool.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 基础模块 -->
+            <dependency>
+                <groupId>com.yangtianle</groupId>
+                <artifactId>common-tool-lock</artifactId>
+                <version>${common.tool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yangtianle</groupId>
+                <artifactId>common-tool-util</artifactId>
+                <version>${common.tool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yangtianle</groupId>
+                <artifactId>common-tool-log</artifactId>
+                <version>${common.tool.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>
